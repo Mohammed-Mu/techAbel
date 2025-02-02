@@ -1,10 +1,9 @@
 const isProd = process.env.NODE_ENV === 'production';
 
-export default {
-  output: "export",
-  basePath: isProd ? "/techAbel" : "",  // Replace "TechABLE" with your GitHub repo name
-  assetPrefix: isProd ? "/techAbel/" : "",
-  images: {
-    unoptimized: true, // Required for images to work on GitHub Pages
-  },
-};
+const nextConfig = {
+    output: 'export',  // This enables static export for Next.js 13
+    basePath: isProd ? '/techAbel' : '',  // Replace with your repo name
+    assetPrefix: isProd ? '/techAbel/' : '',  // Adjust asset paths
+  };
+
+export default nextConfig;
